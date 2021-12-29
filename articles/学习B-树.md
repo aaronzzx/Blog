@@ -37,7 +37,7 @@
 
 可以发现它们还是可以有共同点的，例如将二叉搜索树的 **8** 与父节点 **4** 合并，**12** 与父节点 **10** 合并，**13** 、**15** 与父节点 **14** 合并，那么可以得到这样的一棵树：
 
-![bst_to_b_tree](https://raw.githubusercontent.com/aaronzzx/blog/main/images/images\bst_to_b_tree.jpg)
+![bst_to_b_tree](https://raw.githubusercontent.com/aaronzzx/blog/main/images/bst_to_b_tree.jpg)
 
 可以发现，合并后的二叉搜索树完美对应上面的B-树，那么肯定存在某种规则能够使二叉搜索树转换为B-树。
 
