@@ -83,6 +83,12 @@
 
 1. 当兄弟节点当前存储的元素至少有 **⌈ m / 2 ⌉** 个元素，可以向其借一个元素，这种方式其实就是旋转。
 
+   ![five_level_b_tree_delete(1)](https://raw.githubusercontent.com/aaronzzx/blog/main/images/five_level_b_tree_delete(1).jpg)
+
    例如上面的5阶B-树，删除 **22** 后剩下 **24** ，将 **20** 向下和 **24** 合并，然后从【16，17，18】将 **18** 上溢代替 **20** 成为父节点，整个过程是一个右旋操作。
 
+   
+
 2. 兄弟节点不够借，直接将父节点向下与左右子节点合并，合并后的节点元素个数等于 **⌈ m / 2 ⌉ + ⌈ m / 2 ⌉ - 2** ，不会超过 **m - 1** ，这种操作可能造成父节点继续发生下溢，只需要重复进行下溢修复操作即可，下溢可能会一直向上传播，最坏则会到达根节点。
+
+   ![five_level_b_tree_delete(2)](https://raw.githubusercontent.com/aaronzzx/blog/main/images/five_level_b_tree_delete(2).jpg)
